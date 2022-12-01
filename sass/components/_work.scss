@@ -1,5 +1,11 @@
 .work {
 	padding-top: 0;
+
+	display: none;
+		//desktop
+		@media screen and (min-width: 1200px) {
+			display: block;
+		}
 }
 
 .work__list {

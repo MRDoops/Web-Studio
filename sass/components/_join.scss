@@ -12,6 +12,15 @@
 .join__list {
 	display: flex;
 	gap: 10px;
+
+
+
+	@media screen and (max-width: 767px) {
+		margin-bottom: 60px;
+	}
+	@media screen and (max-width: 1199px) {
+		justify-content: center;
+	}
 }
 
 .join__icon {

@@ -35,17 +35,22 @@
 			<ul class="header-contacts">
 				<li class="header-contacts__item">
 					<a href="mailto:info@devstudio.com" class="header-contacts__link active"><svg
-							class="header-contacts__icon" width="16" height="12">
+							class="header-contacts__icon icon-mail" width="16" height="12">
 							<use href="./images/icons.svg#envelope"></use>
 						</svg>info@devstudio.com</a>
 				</li>
 				<li class="header-contacts_item">
-					<a href="tel:+380961111111" class="header-contacts__link active"><svg class="header-contacts__icon"
-							width="10" height="16">
+					<a href="tel:+380961111111" class="header-contacts__link active"><svg
+							class="header-contacts__icon icon-mob" width="10" height="16">
 							<use href="./images/icons.svg#smartphone"></use>
 						</svg>+38 096 111 11 11</a>
 				</li>
 			</ul>
+			<button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+				<svg class="mobile__menu--activ" width="40" height="40">
+					<use href="./images/icons.svg#mobile-menu"></use>
+				</svg>
+			</button>
 		</div>
 	</header>
 	<main class="main">
@@ -104,21 +109,23 @@
 				<h2 class="title-content">Чим ми займаємося</h2>
 				<ul class="work__list">
 					<li class="work__item">
-						<div class="work__label"><img class="img-list" width="370" src="images/employment/box1.jpg"
-								alt="працюючи за столом в офісі">
+						<div class="work__label">
+							<img class="img-list" srcset="./images/employment/box1.jpg 1x, ./images/employment/box1@2x.jpg 2x"
+								width="370" src="./images/employment/box1.jpg" alt="працюючи за столом в офісі">
 							<p class="work__subtitle">Десктопні додатки</p>
 						</div>
 					</li>
 					<li class="work__item">
-						<div class="work__label"><img class="work__img" width="370" src="images/employment/box2.jpg"
-								alt="робочий інтерфейс мобільних телефонів">
-
+						<div class="work__label"><img class="work__img"
+								srcset="./images/employment/box2.jpg 1x, images/employment/box2@2x.jpg 2x" width="370"
+								src="images/employment/box2.jpg" alt="робочий інтерфейс мобільних телефонів">
 							<p class="work__subtitle">Мобільні додатки</p>
 						</div>
 					</li>
 					<li class="work__item">
-						<div class="work__label"><img class="work__img" width="370" src="images/employment/box3.jpg"
-								alt="робочий графічний планшет вибору кольору">
+						<div class="work__label"><img class="work__img"
+								srcset="./images/employment/box3.jpg 1x, ./images/employment/box3@2x.jpg 2x" width="370"
+								src="./images/employment/box3.jpg" alt="робочий графічний планшет вибору кольору">
 							<p class="work__subtitle">Дизайнерські рішення</p>
 						</div>
 					</li>
@@ -130,7 +137,15 @@
 				<h2 class="title-content">Наша команда</h2>
 				<ul class="team__card">
 					<li class="team__list">
-						<img class="team__foto" width="270" src="images/team-card/card1.jpg" alt="Ігор Дем'яненко">
+						<picture>
+							<source media="(min-width: 1200px)"
+								srcset="images/team-card/card1_lg@1x.jpg 1x, images/team-card/card1_lg@2x.jpg 2x">
+							<source media="(min-width: 768px)"
+								srcset="images/team-card/card1_tb@1x.jpg 1x, images/team-card/card1_tb@2x.jpg 2x">
+							<source media="(max-width: 787px)"
+								srcset="images/team-card/card1_mb@1x.jpg 1x, images/team-card/card1_mb@2x.jpg 2x">
+							<img class="team__foto" src="images/team-card/card1_mb@1x.jpg" loading="lazy" alt="Ігор Дем'яненко">
+						</picture>
 						<div class="team__card--content">
 							<h3 class="team__card-title">Ігор Дем'яненко</h3>
 							<p class="team__card-subtitle">Product Designer</p>
@@ -159,7 +174,15 @@
 						</div>
 					</li>
 					<li class="team__list">
-						<img class="team__foto" width="270" src="images/team-card/card2.jpg" alt="Ольга Рєпіна">
+						<picture>
+							<source media="(min-width: 1200px)"
+								srcset="images/team-card/card2_lg@1x.jpg 1x, images/team-card/card2_lg@2x.jpg 2x">
+							<source media="(min-width: 768px)"
+								srcset="images/team-card/card2_tb@1x.jpg 1x, images/team-card/card2_tb@2x.jpg 2x">
+							<source media="(max-width: 787px)"
+								srcset="images/team-card/card2_mb@1x.jpg 1x, images/team-card/card2_mb@2x.jpg 2x">
+							<img class="team__foto" src="images/team-card/card2_mb@1x.jpg" loading="lazy" alt="Ольга Рєпіна">
+						</picture>
 						<div class="team__card--content">
 							<h3 class="team__card-title">Ольга Рєпіна</h3>
 							<p class="team__card-subtitle">Frontend Developer</p>
@@ -188,7 +211,15 @@
 							</ul>
 					</li>
 					<li class="team__list">
-						<img class="team__foto" width="270" src="images/team-card/card3.jpg" alt="Микола Тарасов">
+						<picture>
+							<source media="(min-width: 1200px)"
+								srcset="images/team-card/card3_lg@1x.jpg 1x, images/team-card/card3_lg@2x.jpg 2x">
+							<source media="(min-width: 768px)"
+								srcset="images/team-card/card3_tb@1x.jpg 1x, images/team-card/card3_tb@2x.jpg 2x">
+							<source media="(max-width: 787px)"
+								srcset="images/team-card/card3_mb@2x.jpg 1x, images/team-card/card3_mb@2x.jpg 2x">
+							<img class="team__foto" src="images/team-card/card2_mb@1x.jpg" loading="lazy" alt="Микола Тарасов">
+						</picture>
 						<div class="team__card--content">
 							<h3 class="team__card-title">Микола Тарасов</h3>
 							<p class="team__card-subtitle">Marketing</p>
@@ -217,7 +248,15 @@
 						</div>
 					</li>
 					<li class="team__list">
-						<img class="team__foto" width="270" src="images/team-card/card4.jpg" alt="Михайло Єрмаков">
+						<picture>
+							<source media="(min-width: 1200px)"
+								srcset="images/team-card/card4_lg@1x.jpg 1x, images/team-card/card4_lg@2x.jpg 2x">
+							<source media="(min-width: 768px)"
+								srcset="images/team-card/card4_tb@1x.jpg 1x, images/team-card/card4_tb@2x.jpg 2x">
+							<source media="(max-width: 787px)"
+								srcset="images/team-card/card4_mb@2x.jpg 1x, images/team-card/card4_mb@2x.jpg 2x">
+							<img class="team__foto" src="images/team-card/card2_mb@1x.jpg" loading="lazy" alt="Михайло Єрмаков">
+						</picture>
 						<div class="team__card--content">
 							<h3 class="team__card-title">Михайло Єрмаков</h3>
 							<p class="team__card-subtitle">UI Designer</p>
@@ -342,6 +381,7 @@
 			</div>
 		</div>
 	</footer>
+	<!-- Modal menu -->
 	<div class="backdrop is-hidden" data-modal>
 		<div class="modal">
 			<button class="modal__close-btn" type="button" data-modal-close><svg class="modal__icon-btn" width="18"
@@ -393,8 +433,36 @@
 			</form>
 		</div>
 	</div>
-
+	<!-- Mobil menu -->
+	<div class="menu-container js-menu-container" id="mobile-menu">
+		<button class="menu-toggle js-close-menu">
+			<svg class="mobile-menu mobile__menu--activ" width="40" height="40">
+				<use href="./images/icons.svg#mobile-cross"></use>
+			</svg>
+		</button>
+		<ul class="mobile-menu">
+			<li class="mobile-menu__item"><a href="./index.html" class="link">Студія</a></li>
+			<li class="mobile-menu__item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
+			<li class="mobile-menu__item"><a href="#" class="link">Контакти</a></li>
+		</ul>
+		<ul class="menu-contacts-list">
+			<li class="menu-contacts-item"><a class="menu-contacts-link--tel" href="tel:+380961111111">+38 096 111 11
+					11</a></li>
+			<li class="menu-contacts-item"><a class="menu-contacts-link"
+					href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+		</ul>
+		<ul class="menu-link">
+			<li class="menu-item"><a class="menu-link-item" href="#">Instagram</a></li>
+			<li class="menu-item"><a class="menu-link-item" href="#">Twitter</a></li>
+			<li class="menu-item"><a class="menu-link-item" href="#">Facebook</a></li>
+			<li class="menu-item"><a class="menu-link-item" href="#">LinkedIn</a></li>
+		</ul>
+	</div>
 	<script src="./js/modal.js"></script>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+		integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+		crossorigin="anonymous"></script>
+	<script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>

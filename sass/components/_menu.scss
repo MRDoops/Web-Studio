@@ -1,0 +1,153 @@
+.menu-toggle {
+	min-height: 40px;
+	min-width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	border-radius: 50%;
+	outline: none;
+}
+
+@media (min-width: 768px) {
+	.menu-toggle {
+		display: none;
+	}
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+
+	width: 100vw;
+	height: 100vh;
+	padding: 48px 40px;
+	background-color: var(--white-color);
+	z-index: 999;
+	transform: translateX(100%);
+	transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+	transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	color: #fff;
+}
+
+.mobile-menu {
+	padding: 0;
+	margin-bottom: auto;
+	list-style: none;
+}
+
+.mobile-menu .link {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: calc(40 / 47);
+	letter-spacing: 0.02em;
+
+	display: block;
+	color: var(--title-text-color);
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: var(--accent-color);
+	}
+}
+
+.mobile-menu__item {
+	padding-bottom: 32px;
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+
+}
+
+
+.mobile__menu--activ,
+.mobile__menu--activ {
+
+	&:hover,
+	&:focus {
+		fill: var(--accent-color);
+	}
+}
+
+.menu-contacts-list {
+	margin-bottom: 64px;
+}
+
+.menu-contacts-item {
+	padding-bottom: 32px;
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+
+.menu-contacts-link--tel {
+	font-weight: 500;
+	font-size: 34px;
+	line-height: calc(40 / 34);
+	letter-spacing: 0.02em;
+
+	text-decoration: none;
+	color: var(--accent-color);
+}
+
+
+.menu-contacts-link {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: calc(28 / 24);
+	letter-spacing: 0.02em;
+	text-decoration: none;
+
+	color: var(--primary-text-color);
+}
+
+.menu-link {
+	display: flex;
+}
+
+.menu-item:not(:last-child) {
+	border-right: 1px solid #ECECEC;
+	padding-right: 10px;
+}
+.menu-item:not(:first-child) {
+	padding-left: 10px;
+}
+
+.menu-link-item {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.22;
+
+	letter-spacing: 0.02em;
+
+	color: var(--accent-color);
+	text-decoration: none;
+}

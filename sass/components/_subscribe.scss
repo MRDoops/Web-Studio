@@ -1,12 +1,17 @@
 .subscribe {
 	display: block;
 
-	margin-left: 93px;
 	align-items: center;
 	justify-content: center;
+
+	@media screen and (min-width: 1200px) {
+		margin-left: 93px;
+	}
 }
 
 .subscribe__titl {
+
+	display: block;
 	margin-bottom: 20px;
 
 	font-weight: 700;
@@ -17,13 +22,15 @@
 }
 
 .subscribe__form {
-	display: flex;
+
+	@media screen and (min-width: 1200px) {
+		display: flex;
+	}
 }
 
 .subscribe__input {
-	margin-right: 12px;
 	padding-left: 16px;
-	width: 358px;
+	width: 100%;
 	height: 50px;
 
 	font-weight: 400;
@@ -55,5 +62,18 @@
 		align-items: center;
 
 		color: rgba(255, 255, 255, 0.6);
+	}
+
+	@media screen and (min-width: 480px) {
+		width: 450px;
+	}
+
+	@media screen and (max-width: 1199px) {
+		margin-bottom: 20px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-right: 12px;
+		width: 358px;
 	}
 }
